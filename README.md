@@ -14,6 +14,7 @@ p4studio:
 cd $SDE/p4studio_build
 ./p4studio_build.py -up profiles/all_profiles.yaml
 ```
+Use `-rb` if you encounter compilation failures.
 
 platform:
 ```bash
