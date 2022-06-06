@@ -1,0 +1,33 @@
+# SDE_VERSION : 9.1.1
+
+all_profile:
+  # Global flags to configure
+  global_configure_options: ''
+
+  # SDE components to be installed
+  packages:
+    - bf-syslibs:
+      - bf_syslibs_configure_options: ''
+    - bf-utils:
+      - bf_utils_configure_options: ''
+    - bf-diags:
+      - bf_diags_configure_options: ''
+    - switch-p4-16:
+      - switch_configure_options: ''
+      - switch_profile: x1_tofino
+    - p4-examples:
+      - p414
+      - p416
+    - ptf-modules
+    - bf-drivers:
+      - bf_drivers_configure_options: '--with-kdrv=no'
+      - bf-runtime
+      - p4-runtime
+
+  # Third party source packages to be installed
+  package_dependencies:
+    - grpc
+    - thrift
+
+  # Tofino architecture
+  tofino_architecture: tofino
